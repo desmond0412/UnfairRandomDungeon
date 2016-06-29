@@ -32,6 +32,7 @@ public class CharacterControl : MonoBehaviour {
 
     bool moveLeft,moveRight;
     int horizontalHash,verticalHash,jumpHash;
+    float lastJumpTimeFlag;
 
     void Awake(){
         horizontalHash = Animator.StringToHash("HorizontalSpeed");
@@ -94,6 +95,7 @@ public class CharacterControl : MonoBehaviour {
         body.velocity = new Vector2(velocity.x,body.velocity.y);
 
         velocity = new Vector2(velocity.x,body.velocity.y);
+        lastJumpTimeFlag -= Time.fixedDeltaTime;
     }
 
     void StatsModifier(){
@@ -106,13 +108,13 @@ public class CharacterControl : MonoBehaviour {
             isMoving = false;
         }
 
-        if(velocity.y <= 0.0f){
+        if(velocity.y < -0.1f){
             isFalling = true;
         }else{
             isFalling = false;
         }
 
-        if(isFalling && TouchGround()){
+        if(TouchGround() && lastJumpTimeFlag <= 0.0f){
             numJump = 0;
         }
     }
@@ -121,6 +123,7 @@ public class CharacterControl : MonoBehaviour {
         if(numJump < currMaxJumpCount){
             body.velocity = new Vector2(0.0f,jumpForce);
             numJump ++;
+            lastJumpTimeFlag = 0.25f;
         }
     }
 
@@ -150,6 +153,10 @@ public class CharacterControl : MonoBehaviour {
         }
 
         return false;
+    }
+
+    public void ResetLevel(){
+        item.ResetLevel();
     }
     #region utility
 

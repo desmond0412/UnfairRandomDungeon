@@ -64,6 +64,7 @@ public class LevelManager : MonoBehaviour {
             Camera.main.GetComponent<CameraController>().NextLevel();
 
             player.gameObject.SetActive(false);
+            player.ResetLevel();
 
             yield return new WaitForSeconds(cc.changeLevelTime);
             nextLevel.StartLevel();

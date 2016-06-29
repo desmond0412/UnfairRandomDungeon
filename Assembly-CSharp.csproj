@@ -108,6 +108,8 @@
      <Compile Include="Assets\Script\Core\Utility\SphereGizmos.cs" />
      <Compile Include="Assets\Script\Core\Utility\SystemTimeUtility.cs" />
      <Compile Include="Assets\Script\EndPoint.cs" />
+     <Compile Include="Assets\Script\Hazard.cs" />
+     <Compile Include="Assets\Script\ItemPickup.cs" />
      <Compile Include="Assets\Script\LevelManager.cs" />
      <Compile Include="Assets\Script\StartPoint.cs" />
  <Reference Include="UnityEngine.UI">

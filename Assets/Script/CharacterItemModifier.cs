@@ -26,4 +26,12 @@ public class CharacterItemModifier : MonoBehaviour {
             additionalHorizontalSpeed = 0.0f;
         }
     }
+
+    public void PickUp(ItemList i){
+        activeItem = i;
+    }
+
+    public void ResetLevel(){
+        activeItem = ItemList.None;
+    }
 }
