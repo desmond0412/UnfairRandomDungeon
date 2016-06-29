@@ -45,13 +45,81 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\CameraController.cs" />
      <Compile Include="Assets\Script\CharacterControl.cs" />
+     <Compile Include="Assets\Script\CharacterItemModifier.cs" />
+     <Compile Include="Assets\Script\Core\ArcCurve.cs" />
+     <Compile Include="Assets\Script\Core\BezierCurve.cs" />
+     <Compile Include="Assets\Script\Core\CameraSetting.cs" />
+     <Compile Include="Assets\Script\Core\CameraShake.cs" />
+     <Compile Include="Assets\Script\Core\CameraSmoothZoom.cs" />
+     <Compile Include="Assets\Script\Core\CopyTransform.cs" />
+     <Compile Include="Assets\Script\Core\Data\DataManager.cs" />
+     <Compile Include="Assets\Script\Core\Data\ObscuredTest.cs" />
+     <Compile Include="Assets\Script\Core\Data\ObscuredType\ObscuredBool.cs" />
+     <Compile Include="Assets\Script\Core\Data\ObscuredType\ObscuredDouble.cs" />
+     <Compile Include="Assets\Script\Core\Data\ObscuredType\ObscuredFloat.cs" />
+     <Compile Include="Assets\Script\Core\Data\ObscuredType\ObscuredInt.cs" />
+     <Compile Include="Assets\Script\Core\FOVController.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidAABB.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidEater.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidEmitter.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidFixtureBox.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidFixtureCircle.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidFixtureEdge.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidFixtureParticleQueryCallback.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidFixturePolygon.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidFixtureShape.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidHeater.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidParticle.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidParticleBodyContact.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidParticleContact.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidParticleDef.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidParticleDestroyer.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidParticleGenerator.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidParticleGroup.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidProxy.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidRelocator.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidRenderer.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidRendererWithFoam.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidSystem.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\FluidSystemDef.cs" />
+     <Compile Include="Assets\Script\Core\FluidDynamic\IFluidFixtureTriggerListener.cs" />
+     <Compile Include="Assets\Script\Core\IInputManagerDelegate.cs" />
+     <Compile Include="Assets\Script\Core\InputManager.cs" />
+     <Compile Include="Assets\Script\Core\MeshOrientationFix.cs" />
+     <Compile Include="Assets\Script\Core\Singleton.cs" />
+     <Compile Include="Assets\Script\Core\SingletonMonoBehaviour.cs" />
+     <Compile Include="Assets\Script\Core\SmoothFollow.cs" />
+     <Compile Include="Assets\Script\Core\SmoothFollow2D.cs" />
+     <Compile Include="Assets\Script\Core\SmoothFollowAreaTrigger.cs" />
+     <Compile Include="Assets\Script\Core\SmoothFollowMiniMap.cs" />
+     <Compile Include="Assets\Script\Core\SwipeGamepad.cs" />
+     <Compile Include="Assets\Script\Core\TextureAnimation.cs" />
+     <Compile Include="Assets\Script\Core\TouchInput.cs" />
+     <Compile Include="Assets\Script\Core\Utility\AESEncryption.cs" />
+     <Compile Include="Assets\Script\Core\Utility\BoxGizmos.cs" />
+     <Compile Include="Assets\Script\Core\Utility\Digest.cs" />
+     <Compile Include="Assets\Script\Core\Utility\EnumHelper.cs" />
+     <Compile Include="Assets\Script\Core\Utility\EnumerableExtensions.cs" />
+     <Compile Include="Assets\Script\Core\Utility\GameObjectExtensions.cs" />
+     <Compile Include="Assets\Script\Core\Utility\GameUtility.cs" />
+     <Compile Include="Assets\Script\Core\Utility\HUDFPS.cs" />
+     <Compile Include="Assets\Script\Core\Utility\SphereGizmos.cs" />
+     <Compile Include="Assets\Script\Core\Utility\SystemTimeUtility.cs" />
+     <Compile Include="Assets\Script\EndPoint.cs" />
+     <Compile Include="Assets\Script\LevelManager.cs" />
+     <Compile Include="Assets\Script\StartPoint.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity5.3.4f3/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity5.3.4f3/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{D69978E2-0201-44CA-0572-4054B554CF7C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
